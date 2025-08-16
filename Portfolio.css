@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'ElanITC';
+  src: url('Fonts/elanitcstd-book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+  margin: 0;
+}
+
+#intro{
+  height: 40vh;
+  width: 60%;
+  background-color: bisque;
+  margin-left: 20%;
+  margin-top: 5vh;
+}
+
+#introLeft{
+  height: 40vh;
+  width: 70%;
+  background-color:burlywood;
+  float: left;
+}
+
+#introRight{
+  height: 40vh;
+  width: 30%;
+  background-color: rgb(137, 127, 114);
+  float: left;
+}
+
+#introText1{
+  font-size: 4vh;
+  font-weight: bold;
+  font-family: 'ElanITC', sans-serif;
+  margin-left: 1vw;
+}
+
+#introText2{
+  font-size: 2.2vh;
+  font-family: 'ElanITC', sans-serif;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+#introRightCircle{
+  height: 24vh;
+  width: 24vh;
+  background-color: grey;
+  border-radius: 50%;
+  margin-left: 18%;
+  margin-top: 17%;
+  background-image: url('profile.jpg');
+  background-size: cover;
+  background-position: 52%;
+}
+
+#recentPosts{
+  height: 30vh;
+  width: 60%;
+  background-color: white;
+  margin-left: 20%;
+  margin-top: 2vh;
+}
+
+#recentPostsLeft{
+  height: 30vh;
+  width: 50%;
+  background-color: rgb(188, 94, 94);
+  float: left;
+}
+#recentPostsRight{
+  height: 30vh;
+  width: 50%;
+  background-color: rgb(223, 219, 211);
+  float: left;
+}
+
+.recentPostsTexts{
+  margin: 2vh;
+}
+
+#recentPostsLeft1{
+  font-size: 2.5vh;
+  font-weight: 600;
+  font-family: 'ElanITC', sans-serif;
+}
+#recentPostsLeft2, #recentPostsLeft3{
+  font-size: 1.85vh;
+  font-family: 'ElanITC', sans-serif;
+}
+
+/*
+#introRightCircle{
+    height: 20vh;
+    width: 20vh;
+    background-color:rgb(191, 27, 27);
+    border-radius: 50%;
+    margin-left: 26%;
+    margin-top: 45px;
+}*/
+
+#feature{
+  border: 2px solid #333;
+  height: 30vh;
+  width: 57.4%;
+  margin-left: 20%;
+  margin-top: 2vh;
+  background-color: white;
+  padding: 20px;
+}
+#featureLeft{
+  border-radius: 10px;
+  height: 30vh;
+  width: 30%;
+  background-image: url('gg1.jpeg');
+  background-size: cover;
+  float: left;
+}
+#featureRight{
+  border-radius: 10px;
+  height: 30vh;
+  width: 67%;
+  background-color: grey;
+  margin-left: 3%;
+  float: right;
+}   
+
+.text-row {
+  background-color: #ccc;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-family: 'ElanITC', sans-serif;
+}
+
+
+/* From Uiverse.io by satyamchaudharydev */ 
+.button {
+  --width: 100px;
+  --height: 35px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #1163ff;
+  --tooltip-color: transparent;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  margin-left: 1vw;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0;
+  font-size: small;
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover {
+  background: #6c18ff;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
