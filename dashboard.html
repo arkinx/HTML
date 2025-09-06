@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"
+    >
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous"
+    >
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Nav Bar-->
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="profile.html">My Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true" href="#">My Recommendations </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="timetable.html">Timetable</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">About Us</a>
+        </li>
+    </ul>
+
+    <!--Navbar End-->
+    <div class="maindiv">
+        <div class="leftdiv">
+            <div class="opportunities">
+                <h3>Opportunities</h3>
+                <p>Find your next opportunity.</p>
+            </div>
+            <hr>
+            <div class="categories">
+                <h5>Categories</h5>
+                <div class="category">
+                    <input type="checkbox" id="Jobs" name="Jobs" value="Jobs" checked>
+                    <label for="Jobs">Jobs</label>
+                    <span class="count active">24</span>
+                </div>
+
+                <div class="category">
+                    <input type="checkbox" id="Internships" name="Internships" value="Internships">
+                    <label for="Internships">Internships</label>
+                    <span class="count">12</span>
+                </div>
+
+                <div class="category">
+                    <input type="checkbox" id="Scholarships" name="Scholarships" value="Scholarships">
+                    <label for="Scholarships">Scholarships</label>
+                    <span class="count">8</span>
+                </div>
+
+                <div class="category">
+                    <input type="checkbox" id="Schemes" name="Schemes" value="Schemes">
+                    <label for="Schemes">Schemes</label>
+                    <span class="count">5</span>
+                </div>
+            </div>
+
+            <div class="AdvancedFilters">
+                <h5>Advanced Filters</h5>
+                <h6>Location</h6>
+                <select name="Location">
+                    <option>All Locations</option>
+                    <option>Kolkata</option>
+                    <option>Bengaluru</option>
+                    <option>Hyderabad</option>
+                    <option>Mumbai</option>
+                    <option>Chennai</option>
+                    <option>Delhi</option>
+                    <option>Remote</option>
+                </select>
+                <br>
+                <h6>Qualifications</h6>
+                <select name="Qualifications">
+                    <option>Any Qualifications</option>
+                    <option>Bachelor's Degree</option>
+                    <option>Master's Degree</option>
+                    <option>PhD</option>
+                    <option>High School</option>
+                </select>
+                <br>
+                <h6>Deadline</h6>
+                <select name="Deadline">
+                    <option>Any Time</option>
+                    <option>Next 7 days</option>
+                    <option>Next 30 days</option>
+                    <option>Next 3 months</option>
+                </select>
+                <br>
+               
+                <input type="submit" value="Apply Filters">
+            </div>
+        </div>
+
+        <div class="middlediv">
+            <div class="header">
+                <div class="LeftMiddleDiv">
+                    <h4>Available Opportunities</h4>
+                    <p>49 opportunities found</p>
+                </div>
+                <div class="RightMiddleDiv">
+                    <select name="Sort">
+                        <option>Sort By: Newest</option>
+                        <option>Sort By: Deadline</option>
+                        <option>Sort By: Relevance</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="Opplist">
+                <div class="Card" id="Card1">
+                    <div class="card-header">
+                        <span class="badge job">Job</span>
+                        <span class="bookmark">🔖</span>
+                    </div>
+                    <h6>Senior Software Engineer</h6>
+                    <p class="company">TechCorp Inc.</p>
+                    <div class="location">
+                        <p>San Francisco, CA</p>
+                        <p>July 31, 2024</p>
+                    </div>
+                    <p class="desc">Join our innovative team to build cutting-edge software solutions...</p>
+                    <button class="button">Apply Now</button>
+                </div>
+
+                <div class="Card">
+                    <div class="card-header">
+                        <span class="badge internship">Internship</span>
+                        <span class="bookmark">🔖</span>
+                    </div>
+                    <h6>Data Science Intern</h6>
+                    <p class="company">DataFlow Analytics</p>
+                    <div class="location">
+                        <p>Remote</p>
+                        <p>Jan 10, 2025</p>
+                    </div>
+                    <p class="desc">6-month paid internship working with real-world datasets...</p>
+                    <button class="button">Apply Now</button>
+                </div>
+
+                <div class="Card">
+                    <div class="card-header">
+                        <span class="badge scholarship">Scholarship</span>
+                        <span class="bookmark">🔖</span>
+                    </div>
+                    <h6>Merit Scholarship Program</h6>
+                    <p class="company">Global Education Foundation</p>
+                    <div class="location">
+                        <p>Worldwide</p>
+                        <p>Feb 28, 2025</p>
+                    </div>
+                    <p class="desc">Full tuition scholarship for outstanding students pursuing STEM degrees...</p>
+                    <button class="button">Apply Now</button>
+                </div>
+
+                <div class="Card">
+                    <div class="card-header">
+                        <span class="badge scheme">Scheme</span>
+                        <span class="bookmark">🔖</span>
+                    </div>
+                    <h6>Startup Incubator Program</h6>
+                    <p class="company">Innovation Hub</p>
+                    <div class="location">
+                        <p>New York, NY</p>
+                        <p>Mar 15, 2025</p>
+                    </div>
+                    <p class="desc">12-week accelerator program for early-stage startups with funding opportunities...</p>
+                    <button class="button">Apply Now</button>
+                </div>
+
+                <!-- More Cards can be added similarly
+                <div id="Scheme"class="Card">
+                    <h6>Startup Incubator Program</h6>
+                    <p>Innovation Hub</p>
+                    <p>New York, NY</p>
+                    <p>Qualifications: Master's Degree</p>
+                    <p>Mar 15, 2025</p>
+                    <button>Apply Now</button>
+                </div>
+                <div id="Scheme"class="Card">
+                    <h6>Startup Incubator Program</h6>
+                    <p>Innovation Hub</p>
+                    <p>New York, NY</p>
+                    <p>Qualifications: Master's Degree</p>
+                    <p>Mar 15, 2025</p>
+                    <button>Apply Now</button>
+                </div>
+                -->
+
+            </div>
+        </div>
+        <div class="rightdiv"></div>    
+    </div>
+</body>
+</html>
+
